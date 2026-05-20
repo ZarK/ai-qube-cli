@@ -1,6 +1,9 @@
 import { spawnSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
+
+const packageMetadata = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
 
 function runFixture(...args) {
   return spawnSync(process.execPath, ["dist/fixtures/cli.js", ...args], {
@@ -74,7 +77,7 @@ describe("fixture CLI runtime", () => {
     assert.equal(result.stdout, repeated.stdout);
     const schema = JSON.parse(result.stdout);
     assert.equal(schema.schemaVersion, 1);
-    assert.deepEqual(schema.package, { name: "ai-qube-cli", version: "0.1.0" });
+    assert.deepEqual(schema.package, { name: packageMetadata.name, version: packageMetadata.version });
     assert.equal(schema.bin, "fixture");
     assert.deepEqual(schema.extensions, { fixture: true, purpose: "schema-integration" });
     assert.deepEqual(schema.topics.map((topic) => topic.name), ["cache"]);
