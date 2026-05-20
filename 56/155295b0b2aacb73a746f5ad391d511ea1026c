@@ -1,0 +1,21 @@
+aie.config.json
+  s_5922c4696617b5::t_7e852e3dd08ac1 1-119
+AGENTS.md
+  s_5922c4696617b5::t_7e852e3dd08ac1 1-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "56155295b0b2aacb73a746f5ad391d511ea1026c",
+  "prompts": {},
+  "sessions": {
+    "s_5922c4696617b5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e3a34-a74a-7352-841a-3e8b8c9eb7c3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
