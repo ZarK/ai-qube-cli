@@ -223,6 +223,10 @@ function validateFlags(
   flags.forEach((flag, index) => {
     const flagPath = `${path}[${index}]`;
     trackUnique(flag.name, `${flagPath}.name`, "flag name", names, issues);
+  });
+
+  flags.forEach((flag, index) => {
+    const flagPath = `${path}[${index}]`;
     requireDescription(flag.description, `${flagPath}.description`, issues);
     if (!isSupportedFlagType(flag.type)) {
       addIssue(issues, `${flagPath}.type`, `Unsupported flag type "${String(flag.type)}".`);

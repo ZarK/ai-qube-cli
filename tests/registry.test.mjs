@@ -110,6 +110,34 @@ describe("command registry", () => {
     );
   });
 
+  it("reports flag aliases that conflict with later flag names", () => {
+    assert.throws(
+      () =>
+        createCommandRegistry({
+          commands: [
+            {
+              ...validCommand,
+              flags: [
+                {
+                  name: "json",
+                  description: "Render machine-readable JSON output.",
+                  type: "boolean",
+                  aliases: ["format"]
+                },
+                {
+                  name: "format",
+                  description: "Select an output format.",
+                  type: "option",
+                  options: ["human", "json"]
+                }
+              ]
+            }
+          ]
+        }),
+      /commands\[0\]\.flags\[0\]\.aliases\[0\]: Alias "format" conflicts with commands\[0\]\.flags\[1\]\.name/
+    );
+  });
+
   it("reports missing descriptions, undocumented flags, unsupported flag types, and missing examples", () => {
     assert.throws(
       () =>
