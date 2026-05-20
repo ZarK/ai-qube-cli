@@ -18,8 +18,7 @@
     "strict": true,
     "target": "ES2024",
     "types": [
-      "node",
-      "vitest/globals"
+      "node"
     ],
     "verbatimModuleSyntax": true
   },

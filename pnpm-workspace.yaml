@@ -13,3 +13,6 @@ ignoreScripts: true
 strictPeerDependencies: true
 verifyDepsBeforeRun: error
 savePrefix: ""
+
+overrides:
+  semver: 7.7.3
