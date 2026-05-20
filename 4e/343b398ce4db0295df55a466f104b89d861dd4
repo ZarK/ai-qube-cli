@@ -1,0 +1,29 @@
+src/mutation/index.ts
+  s_5a635cbfc57d24::t_ece16668c7bd8e 147
+src/redaction/index.ts
+  s_5a635cbfc57d24::t_ece16668c7bd8e 49-51
+tests/mutation.test.mjs
+  s_5a635cbfc57d24::t_ece16668c7bd8e 61-65
+tests/redaction.test.mjs
+  s_5a635cbfc57d24::t_ece16668c7bd8e 22,31
+tests/output-errors.test.mjs
+  s_5a635cbfc57d24::t_ece16668c7bd8e 23,28
+src/output/index.ts
+  s_5a635cbfc57d24::t_ece16668c7bd8e 104-106,108
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "4e343b398ce4db0295df55a466f104b89d861dd4",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
