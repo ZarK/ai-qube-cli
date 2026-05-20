@@ -1,0 +1,21 @@
+AGENTS.md
+  s_5922c4696617b5::t_a9fd38139563cd 3,52,64
+.opencode/commands/make-it-so.md
+  s_5922c4696617b5::t_a9fd38139563cd 1-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "1f12c63cfb578442e16a59288da7e100cff07f81",
+  "prompts": {},
+  "sessions": {
+    "s_5922c4696617b5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e3a34-a74a-7352-841a-3e8b8c9eb7c3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
