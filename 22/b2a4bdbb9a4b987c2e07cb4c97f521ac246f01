@@ -1,0 +1,28 @@
+tests/metadata-implementation.test.mjs
+  s_5a635cbfc57d24::t_d21acc7847872d 14,17-18,28-29,37-38
+tests/package-metadata.test.mjs
+  s_5a635cbfc57d24::t_905b6722f004aa 44
+  s_5a635cbfc57d24::t_cdbe5cc62b83c6 51-54
+  s_5a635cbfc57d24::t_d22032a1d8ef49 55-58
+tests/registry.test.mjs
+  s_5a635cbfc57d24::t_d21acc7847872d 106-107
+  s_5a635cbfc57d24::t_d5dd80f4daa310 178-200
+  s_5a635cbfc57d24::t_d799eb7765824d 53,64
+  s_5a635cbfc57d24::t_d22032a1d8ef49 1-52,54-63,65-105,108-177,201
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "22b2a4bdbb9a4b987c2e07cb4c97f521ac246f01",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
