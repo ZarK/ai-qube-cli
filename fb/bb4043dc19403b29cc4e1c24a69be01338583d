@@ -1,0 +1,21 @@
+pnpm-workspace.yaml
+  s_5a635cbfc57d24::t_48540e95091b18 18
+pnpm-lock.yaml
+  ai_agent 8,168-169,239,341
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "fbbb4043dc19403b29cc4e1c24a69be01338583d",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
