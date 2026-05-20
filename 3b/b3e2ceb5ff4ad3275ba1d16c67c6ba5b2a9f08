@@ -1,0 +1,59 @@
+src/fixtures/cli.ts
+  s_5a635cbfc57d24::t_2adfedb7901449 7,9,29-43,45-96
+package.json
+  s_5a635cbfc57d24::t_f22306a2935e91 50-53
+src/schema/index.ts
+  s_5a635cbfc57d24::t_bcff1dad229bc8 12,56,115-121,187,275-283,360
+scripts/assert-pack-contents.mjs
+  s_5a635cbfc57d24::t_f22306a2935e91 39-42
+src/metadata/index.ts
+  s_5a635cbfc57d24::t_25a57af4e90dae 13,33-34
+src/index.ts
+  s_5a635cbfc57d24::t_25a57af4e90dae 8
+tests/fixture-cli.test.mjs
+  s_5a635cbfc57d24::t_f22306a2935e91 64-65,89,92,99-110,167,176-196
+tests/mutation.test.mjs
+  s_5a635cbfc57d24::t_f22306a2935e91 1-55
+tests/schema.test.mjs
+  s_5a635cbfc57d24::t_72773e21f44e45 93-98,115-120,127-143
+src/fixtures/metadata.ts
+  s_5a635cbfc57d24::t_2adfedb7901449 2,120,125-126,130,146-214,310
+tests/metadata-validation.test.mjs
+  s_5a635cbfc57d24::t_72773e21f44e45 66-86
+tests/metadata-types.test.ts
+  s_5a635cbfc57d24::t_72773e21f44e45 53-65
+src/mutation/index.ts
+  s_5a635cbfc57d24::t_25a57af4e90dae 1-105,114-118,132-208
+  s_5a635cbfc57d24::t_bcff1dad229bc8 106-113,119-131
+src/registry/index.ts
+  s_5a635cbfc57d24::t_bcff1dad229bc8 194,301-307
+src/metadata/define.ts
+  s_5a635cbfc57d24::t_bcff1dad229bc8 61,89-96
+src/help/index.ts
+  s_5a635cbfc57d24::t_bcff1dad229bc8 178-179,197,210-216
+tests/package-metadata.test.mjs
+  s_5a635cbfc57d24::t_f22306a2935e91 79-82
+tests/registry.test.mjs
+  s_5a635cbfc57d24::t_72773e21f44e45 291-314
+  s_5a635cbfc57d24::t_1cbcf75ad45380 90
+tests/metadata-implementation.test.mjs
+  s_5a635cbfc57d24::t_f22306a2935e91 8,14,46,50-52
+src/metadata/types.ts
+  s_5a635cbfc57d24::t_25a57af4e90dae 12-23,95-101,142
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "3bb3e2ceb5ff4ad3275ba1d16c67c6ba5b2a9f08",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
