@@ -1,0 +1,23 @@
+src/registry/index.ts
+  s_5a635cbfc57d24::t_35ed32846b96fb 111-114,307-312,314,317
+src/metadata/define.ts
+  s_5a635cbfc57d24::t_35ed32846b96fb 66
+tests/registry.test.mjs
+  s_5a635cbfc57d24::t_35ed32846b96fb 144-178
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "277c756228639173afc33569602d549c151176e2",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
