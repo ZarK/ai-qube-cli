@@ -75,6 +75,37 @@ describe("fixture CLI runtime", () => {
     assert.equal(schema.commands.find((command) => command.name === "cache clear")?.mutation.categories[0], "local-files");
   });
 
+  it("keeps exact multi-token commands ahead of single-token aliases", async () => {
+    const { createCli, createCommand, createCommandRegistry, runCli } = await import("../dist/index.js");
+    const alphaBetaCommand = {
+      kind: "command",
+      name: "alpha beta",
+      description: "Run the exact alpha beta command.",
+      examples: [{ description: "Run alpha beta.", command: "fixture alpha beta" }]
+    };
+    const alphaOtherCommand = {
+      kind: "command",
+      name: "alpha-other",
+      aliases: ["alpha"],
+      description: "Run the aliased alpha command.",
+      examples: [{ description: "Run alpha alias.", command: "fixture alpha" }]
+    };
+    const aliasShadowCli = createCli({
+      bin: "fixture",
+      registry: createCommandRegistry({ commands: [alphaBetaCommand, alphaOtherCommand] }),
+      commands: [
+        createCommand(alphaOtherCommand, () => ({ stdout: "alias-shadow\n" })),
+        createCommand(alphaBetaCommand, () => ({ stdout: "exact-command\n" }))
+      ]
+    });
+
+    const result = await runCli(aliasShadowCli, ["alpha", "beta"]);
+
+    assert.equal(result.exitCode, 0);
+    assert.equal(result.stdout, "exact-command\n");
+    assert.equal(result.executedCommand, "alpha beta");
+  });
+
   it("executes exact commands and explicit aliases", () => {
     const inspect = runFixture("cache", "inspect", "alpha", "--json");
     const clear = runFixture("cc", "--dry-run");

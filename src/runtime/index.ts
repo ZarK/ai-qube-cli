@@ -117,9 +117,12 @@ export function createSchemaCommand(registry: CommandRegistry | (() => CommandRe
     }
   });
 
-  return createCommand(metadata, () => ({
-    stdout: `${JSON.stringify({ bin, topics: resolveRegistry(registry).topics, commands: resolveRegistry(registry).commands }, null, 2)}\n`
-  }));
+  return createCommand(metadata, () => {
+    const resolved = resolveRegistry(registry);
+    return {
+      stdout: `${JSON.stringify({ bin, topics: resolved.topics, commands: resolved.commands }, null, 2)}\n`
+    };
+  });
 }
 
 export function createCli(options: CliRuntimeOptions): CliRuntime {
@@ -288,14 +291,6 @@ function matchRuntimeCommand(
 ): { readonly command: RuntimeCommand; readonly argv: readonly string[] } | undefined {
   const commandByName = new Map(cli.commands.map((command) => [command.metadata.name, command]));
   const commandByAlias = new Map(cli.commands.flatMap((command) => (command.metadata.aliases ?? []).map((alias) => [alias, command])));
-  const [firstToken] = argv;
-  if (firstToken) {
-    const aliasMatch = commandByAlias.get(firstToken);
-    if (aliasMatch) {
-      return { command: aliasMatch, argv: argv.slice(1) };
-    }
-  }
-
   const commandNames = [...commandByName.keys()].sort((left, right) => right.split(" ").length - left.split(" ").length || compareText(left, right));
   for (const commandName of commandNames) {
     const tokens = commandName.split(" ");
@@ -304,6 +299,14 @@ function matchRuntimeCommand(
       if (command) {
         return { command, argv: argv.slice(tokens.length) };
       }
+    }
+  }
+
+  const [firstToken] = argv;
+  if (firstToken) {
+    const aliasMatch = commandByAlias.get(firstToken);
+    if (aliasMatch) {
+      return { command: aliasMatch, argv: argv.slice(1) };
     }
   }
   return undefined;
