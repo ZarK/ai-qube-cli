@@ -1,0 +1,21 @@
+src/mutation/index.ts
+  s_5a635cbfc57d24::t_887d6ebb28015a 205,215
+tests/mutation.test.mjs
+  s_5a635cbfc57d24::t_887d6ebb28015a 99-117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "148b967d349552fb6e08c2ce878a858a6f19011c",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
