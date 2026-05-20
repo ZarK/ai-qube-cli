@@ -1,0 +1,22 @@
+tests/fixture-cli.test.mjs
+  s_5a635cbfc57d24::t_0c5b58aab9c96f 70,74-75,80
+src/runtime/index.ts
+  s_5a635cbfc57d24::t_0c5b58aab9c96f 149
+  s_5a635cbfc57d24::t_743307872167a9 291
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "40cfdf128d384dabbb7b4255dded075ee61c9479",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
