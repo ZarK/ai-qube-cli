@@ -1,0 +1,42 @@
+tests/metadata-implementation.test.mjs
+  s_0a433db91fc527::t_2603e7b1523f88 1-40
+tests/metadata-types.test.ts
+  s_0a433db91fc527::t_a29e63efc7ec7c 1-75
+src/metadata/index.ts
+  s_5a635cbfc57d24::t_425398f9709c4e 1-33
+src/metadata/types.ts
+  s_5a635cbfc57d24::t_425398f9709c4e 1-129
+src/metadata/define.ts
+  s_5a635cbfc57d24::t_425398f9709c4e 1-64,66-124
+  s_0a433db91fc527::t_81e83e7ce259bf 65
+tests/metadata-validation.test.mjs
+  s_0a433db91fc527::t_e718b73d8ca5bc 1-66
+src/index.ts
+  s_5a635cbfc57d24::t_425398f9709c4e 1-2
+src/fixtures/metadata.ts
+  s_5a635cbfc57d24::t_425398f9709c4e 1-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "5e680ff17c007d8c505e22c5c6ad941842720f0b",
+  "prompts": {},
+  "sessions": {
+    "s_0a433db91fc527": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ses_1b954d55cffevvbDX5tmgLGZUd",
+        "model": "unknown"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    },
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
