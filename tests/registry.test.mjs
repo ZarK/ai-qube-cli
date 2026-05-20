@@ -204,6 +204,33 @@ describe("command registry", () => {
     );
   });
 
+  it("reports malformed runtime identifiers without crashing validation", () => {
+    assert.throws(
+      () =>
+        createCommandRegistry({
+          commands: [
+            {
+              ...validCommand,
+              name: 123,
+              flags: [
+                {
+                  name: 456,
+                  description: "Flag with a malformed runtime name.",
+                  type: "boolean"
+                }
+              ]
+            }
+          ]
+        }),
+      (error) => {
+        assert.ok(error instanceof CommandRegistryValidationError);
+        assert.match(error.message, /commands\[0\]\.name: command name must be a string/);
+        assert.match(error.message, /commands\[0\]\.flags\[0\]\.name: flag name must be a string/);
+        return true;
+      }
+    );
+  });
+
   it("reports inconsistent mutation metadata", () => {
     assert.throws(
       () =>

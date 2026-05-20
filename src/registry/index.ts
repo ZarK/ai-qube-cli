@@ -308,6 +308,10 @@ function trackUnique(
   seen: Map<string, string>,
   issues: CommandRegistryValidationIssue[]
 ): void {
+  if (typeof value !== "string") {
+    addIssue(issues, path, `${label} must be a string.`);
+    return;
+  }
   const normalizedValue = value.trim();
   if (normalizedValue.length === 0) {
     addIssue(issues, path, `Empty ${label} is not allowed.`);
