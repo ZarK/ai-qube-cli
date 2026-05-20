@@ -1,0 +1,36 @@
+src/index.ts
+  s_5a635cbfc57d24::t_c32af9986a7ea3 3-4
+src/help/index.ts
+  s_5a635cbfc57d24::t_288a7adb14e6ff 1-6,8-60,62-75,77-178,198-239,243,247-267
+  s_5a635cbfc57d24::t_bd69f50f0d9cbf 61,76,179-197
+  s_5a635cbfc57d24::t_29337540fbb2cc 7,240-242,244-246
+src/fixtures/cli.ts
+  s_5a635cbfc57d24::t_c32af9986a7ea3 1-6,9-29,31-32,35-49
+  s_5a635cbfc57d24::t_bd69f50f0d9cbf 7-8,30,33-34
+package.json
+  s_5a635cbfc57d24::t_c32af9986a7ea3 30-37
+scripts/assert-pack-contents.mjs
+  s_5a635cbfc57d24::t_c32af9986a7ea3 7-10,15-18,39-42
+src/runtime/index.ts
+  s_5a635cbfc57d24::t_f0a3947c2b58a5 1,28,59-83
+  s_5a635cbfc57d24::t_29337540fbb2cc 37,45,171,216-218,220-222,243,247-249,251,258,260-261,263-265,267-270,273-277,279-280,282
+  s_5a635cbfc57d24::t_bd69f50f0d9cbf 90,121,318-321
+  s_5a635cbfc57d24::t_1635145dcf85ba 236-242,244-246,250,252-257
+  s_5a635cbfc57d24::t_5ce91762c32db3 2-27,29-36,38-44,46-58,84-89,91-120,122-170,172-215,219,223-235,259,262,266,271-272,278,281,283-317,322-359
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "d90e163b45dc7927e77da266f9298c05e16951c1",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
