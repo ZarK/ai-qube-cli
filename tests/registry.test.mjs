@@ -141,6 +141,41 @@ describe("command registry", () => {
     );
   });
 
+  it("reports blank identifiers during registry validation", () => {
+    assert.throws(
+      () =>
+        createCommandRegistry({
+          topics: [
+            {
+              kind: "topic",
+              name: " ",
+              description: "Topic with a blank name."
+            }
+          ],
+          commands: [
+            {
+              ...validCommand,
+              aliases: [" "],
+              flags: [
+                {
+                  name: " ",
+                  description: "Flag with a blank name.",
+                  type: "boolean"
+                }
+              ]
+            }
+          ]
+        }),
+      (error) => {
+        assert.ok(error instanceof CommandRegistryValidationError);
+        assert.match(error.message, /topics\[0\]\.name: Empty topic name is not allowed/);
+        assert.match(error.message, /commands\[0\]\.aliases\[0\]: Empty alias is not allowed/);
+        assert.match(error.message, /commands\[0\]\.flags\[0\]\.name: Empty flag name is not allowed/);
+        return true;
+      }
+    );
+  });
+
   it("reports inconsistent mutation metadata", () => {
     assert.throws(
       () =>

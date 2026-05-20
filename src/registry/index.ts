@@ -108,7 +108,10 @@ function appendDefinition(definition: DefinitionMetadata, topics: TopicMetadata[
 }
 
 function compareByName(left: { readonly name: string }, right: { readonly name: string }): number {
-  return left.name.localeCompare(right.name);
+  if (left.name === right.name) {
+    return 0;
+  }
+  return left.name < right.name ? -1 : 1;
 }
 
 function validateDefinitions(
@@ -301,12 +304,17 @@ function trackUnique(
   seen: Map<string, string>,
   issues: CommandRegistryValidationIssue[]
 ): void {
-  const previousPath = seen.get(value);
-  if (previousPath) {
-    addIssue(issues, path, `Duplicate ${label} "${value}"; first defined at ${previousPath}.`);
+  const normalizedValue = value.trim();
+  if (normalizedValue.length === 0) {
+    addIssue(issues, path, `Empty ${label} is not allowed.`);
     return;
   }
-  seen.set(value, path);
+  const previousPath = seen.get(normalizedValue);
+  if (previousPath) {
+    addIssue(issues, path, `Duplicate ${label} "${normalizedValue}"; first defined at ${previousPath}.`);
+    return;
+  }
+  seen.set(normalizedValue, path);
 }
 
 function requireDescription(value: string, path: string, issues: CommandRegistryValidationIssue[]): void {

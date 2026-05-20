@@ -63,6 +63,7 @@ export function defineCommand<const Command extends CommandMetadata>(command: Co
 
 export function defineMetadata(metadata: CommandMetadata): Readonly<CommandMetadata>;
 export function defineMetadata(metadata: TopicMetadata): Readonly<TopicMetadata>;
+export function defineMetadata(metadata: DefinitionMetadata): Readonly<DefinitionMetadata>;
 export function defineMetadata(metadata: DefinitionMetadata): Readonly<DefinitionMetadata> {
   return metadata.kind === "command" ? defineCommand(metadata) : defineTopic(metadata);
 }
