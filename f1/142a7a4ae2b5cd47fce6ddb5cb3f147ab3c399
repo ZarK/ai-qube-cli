@@ -1,0 +1,42 @@
+scripts/assert-pack-contents.mjs
+  s_5a635cbfc57d24::t_90ef1fdf7645c1 1-2,4-6
+package.json
+  s_5a635cbfc57d24::t_f09155f2dc3a69 66-69
+src/testing/index.ts
+  s_5a635cbfc57d24::t_c953e8a5ca7d13 215,217
+  s_5a635cbfc57d24::t_6a9c16541befd6 1-2,4-105,108-166,171-199,204-214,216,221-234,236-240,243,245-351,356-366,370-399
+  s_5a635cbfc57d24::t_2fc6669a07b47b 244
+  s_5a635cbfc57d24::t_9da30c0f705626 3,106-107
+  s_5a635cbfc57d24::t_162d77b7a49618 167-170,200-203,218-220,235,241-242,352-355,367-369
+tests/testing.test.mjs
+  s_5a635cbfc57d24::t_a7a84a95b10d19 1-31
+tests/package-metadata.test.mjs
+  s_5a635cbfc57d24::t_fb4b5c0c81cec7 1,4-5,97-100,119-127
+  s_5a635cbfc57d24::t_ecea3a66bdb213 128
+src/index.ts
+  s_5a635cbfc57d24::t_f09155f2dc3a69 12
+scripts/expected-pack-files.mjs
+  s_5a635cbfc57d24::t_90ef1fdf7645c1 1-73
+tests/fixture-cli.test.mjs
+  s_5a635cbfc57d24::t_03150129721e51 169
+  s_5a635cbfc57d24::t_c67c2006ffd221 29
+  s_5a635cbfc57d24::t_f1b1ad136b2b8f 4
+  s_5a635cbfc57d24::t_d4fccb3298e625 1,7-8,11,19-20,30-31,39,45,53-55,58,112-113,115,126
+  s_5a635cbfc57d24::t_cf80abfabd23e0 166-168,177-179,190,196,202,213,219,230,236,247,253,267,269,275,281,287
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "f1142a7a4ae2b5cd47fce6ddb5cb3f147ab3c399",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
