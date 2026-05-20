@@ -1,0 +1,35 @@
+docs/M2-metadata-registry-runtime.md
+  s_5a635cbfc57d24::t_b207bc7841880d 14,22
+docs/compatibility-checklist.md
+  s_5a635cbfc57d24::t_760eaa78b74027 1-25,27-44,46-51,53-84,86-162,164
+  s_5a635cbfc57d24::t_90f0b920ceaf09 26,45,52,85,163,165-166
+docs/M3-schema-output-safety.md
+  s_5a635cbfc57d24::t_b207bc7841880d 15
+docs/adoption-guide.md
+  s_5a635cbfc57d24::t_824f65231763fc 122,217,248,251
+  s_5a635cbfc57d24::t_90f0b920ceaf09 5,39,198,309-310,393,395-396
+  s_5a635cbfc57d24::t_760eaa78b74027 1-4,6-38,40-121,123-197,208-216,218-236,242-247,249-250,252-293,295-308,311-369,374-392,394,397-409
+  s_5a635cbfc57d24::t_454389157316bd 237-241,294
+  s_5a635cbfc57d24::t_1743a7021f1ea1 199-207,370-373
+README.md
+  s_5a635cbfc57d24::t_90f0b920ceaf09 28
+  s_5a635cbfc57d24::t_760eaa78b74027 26-27,29-30
+docs/spec.md
+  s_5a635cbfc57d24::t_b207bc7841880d 39,56,70,73,127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "d23a0b54f78b5cec8e905aca7b2fd15e5a4722e7",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
