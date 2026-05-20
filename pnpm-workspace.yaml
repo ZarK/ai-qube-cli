@@ -15,4 +15,4 @@ verifyDepsBeforeRun: error
 savePrefix: ""
 
 overrides:
-  semver: 7.7.3
+  semver: 7.7.2
