@@ -1,0 +1,23 @@
+tests/mutating-consumer-adoption.test.mjs
+  s_5a635cbfc57d24::t_eaa9853529fd43 175-187,196-197,201
+  s_5a635cbfc57d24::t_bfc34ec5fa63cb 2
+  s_5a635cbfc57d24::t_6075e646ba25de 115
+  s_5a635cbfc57d24::t_4f33fdafeee3dc 1,3-114,116-174,188-195,198-199,202-205
+  s_5a635cbfc57d24::t_fa65d92b9dac5d 200
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "0fd6f5dfd549af668cec910522b7d6cca761a91a",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
