@@ -1,0 +1,21 @@
+examples/mutating-consumer/src/cli.ts
+  s_5a635cbfc57d24::t_a9ab4820def8c4 68,153-154
+tests/mutating-consumer-adoption.test.mjs
+  s_5a635cbfc57d24::t_a9ab4820def8c4 132-134,142-144
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "6f5557684ac5373ec8c563a5f126a08b349605e2",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
