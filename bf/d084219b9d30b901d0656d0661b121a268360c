@@ -1,0 +1,30 @@
+scripts/clean.mjs
+  s_5a635cbfc57d24::t_2d729504980b6d 5
+package.json
+  s_5a635cbfc57d24::t_2d729504980b6d 81
+examples/mutating-consumer/package.json
+  s_5a635cbfc57d24::t_4f33fdafeee3dc 1-10
+examples/mutating-consumer/tsconfig.json
+  s_5a635cbfc57d24::t_4f33fdafeee3dc 1-21
+examples/mutating-consumer/src/cli.ts
+  s_5a635cbfc57d24::t_eaa9853529fd43 32-46,71
+  s_5a635cbfc57d24::t_4f33fdafeee3dc 1-31,47-70,72-169
+examples/mutating-consumer/src/metadata.ts
+  s_5a635cbfc57d24::t_4f33fdafeee3dc 1-97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "bfd084219b9d30b901d0656d0661b121a268360c",
+  "prompts": {},
+  "sessions": {
+    "s_5a635cbfc57d24": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b989d6eaffeSKTTLffQj8jRS1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
