@@ -649,7 +649,7 @@ function ensureCommandHandlers(registry: CommandRegistry, commands: readonly Run
 }
 
 function findUnknownFlag(command: CommandMetadata, argv: readonly string[]): string | undefined {
-  const knownFlags = new Set((command.flags ?? []).flatMap((flag) => [flag.name, ...(flag.negatable === true ? [`no-${flag.name}`] : []), ...(flag.aliases ?? [])]));
+  const knownFlags = new Set((command.flags ?? []).flatMap(renderKnownLongFlagNames));
   const knownShortFlags = new Set((command.flags ?? []).map((flag) => flag.short).filter(isString));
   for (const token of argv) {
     if (token === "--") {
@@ -683,14 +683,22 @@ function findNegatableFlagConflict(command: CommandMetadata, argv: readonly stri
     if (flag.negatable !== true) {
       continue;
     }
-    const positive = `--${flag.name}`;
-    const negative = `--no-${flag.name}`;
-    const count = flagArgv.filter((token) => token === positive || token === negative).length;
+    const positive = new Set([flag.name, ...(flag.aliases ?? [])].map((name) => `--${name}`));
+    const negative = new Set([flag.name, ...(flag.aliases ?? [])].map((name) => `--no-${name}`));
+    const count = flagArgv.filter((token) => positive.has(token) || negative.has(token)).length;
     if (count > 1) {
       return flag.name;
     }
   }
   return undefined;
+}
+
+function renderKnownLongFlagNames(flag: FlagMetadata): readonly string[] {
+  return [
+    flag.name,
+    ...(flag.negatable === true ? [`no-${flag.name}`] : []),
+    ...(flag.aliases ?? []).flatMap((alias) => [alias, ...(flag.negatable === true ? [`no-${alias}`] : [])])
+  ];
 }
 
 function trimAtFirstFlag(tokens: readonly string[]): readonly string[] {

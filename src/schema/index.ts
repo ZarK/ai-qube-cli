@@ -233,7 +233,7 @@ function renderFlagTokens(flag: FlagMetadata): readonly string[] {
     `--${flag.name}`,
     ...(flag.negatable === true ? [`--no-${flag.name}`] : []),
     ...(flag.short !== undefined ? [`-${flag.short}`] : []),
-    ...sortText(flag.aliases ?? []).map((alias) => `--${alias}`)
+    ...sortText(flag.aliases ?? []).flatMap((alias) => [`--${alias}`, ...(flag.negatable === true ? [`--no-${alias}`] : [])])
   ];
 }
 

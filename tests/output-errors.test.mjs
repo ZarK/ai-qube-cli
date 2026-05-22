@@ -245,7 +245,7 @@ describe("output and error helpers", () => {
       description: "Inspect policy flags.",
       flags: [
         { name: "json", description: "Render JSON output.", type: "boolean" },
-        { name: "worktree", description: "Allow linked git worktrees.", type: "boolean", negatable: true }
+        { name: "worktree", aliases: ["linked-worktree"], description: "Allow linked git worktrees.", type: "boolean", negatable: true }
       ],
       examples: [{ description: "Disable worktrees.", command: "fixture policy check --no-worktree --json" }],
       interactions: { json: true }
@@ -263,14 +263,16 @@ describe("output and error helpers", () => {
 
     const enabled = await runCli(cli, ["policy", "check", "--worktree", "--json"]);
     const disabled = await runCli(cli, ["policy", "check", "--no-worktree", "--json"]);
+    const disabledAlias = await runCli(cli, ["policy", "check", "--no-linked-worktree", "--json"]);
     const omitted = await runCli(cli, ["policy", "check", "--json"]);
     const duplicate = await runCli(cli, ["policy", "check", "--worktree", "--worktree", "--json"]);
-    const conflicting = await runCli(cli, ["policy", "check", "--worktree", "--no-worktree", "--json"]);
+    const conflicting = await runCli(cli, ["policy", "check", "--linked-worktree", "--no-worktree", "--json"]);
     const unknownNo = await runCli(cli, ["policy", "check", "--no-autonomous", "--json"]);
     const help = await runCli(cli, ["help", "policy", "check"]);
 
     assert.deepEqual(JSON.parse(enabled.stdout), { ok: true, command: "policy check", hasWorktree: true, worktree: true });
     assert.deepEqual(JSON.parse(disabled.stdout), { ok: true, command: "policy check", hasWorktree: true, worktree: false });
+    assert.deepEqual(JSON.parse(disabledAlias.stdout), { ok: true, command: "policy check", hasWorktree: true, worktree: false });
     assert.deepEqual(JSON.parse(omitted.stdout), { ok: true, command: "policy check", hasWorktree: false, worktree: null });
     assert.equal(duplicate.exitCode, 2);
     assert.match(JSON.parse(duplicate.stdout).error.likelyCause, /worktree/);

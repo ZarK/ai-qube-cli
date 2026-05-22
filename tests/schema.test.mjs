@@ -17,7 +17,7 @@ describe("schema renderer", () => {
         { name: "output", short: "o", description: "Select output format.", type: "option", aliases: ["format"], options: ["json", "human"], defaultValue: "human" },
         { name: "tag", short: "t", description: "Attach labels to the cache query.", type: "string", aliases: ["label"], multiple: true },
         { name: "verbose", description: "Render verbose diagnostics.", type: "boolean", aliases: ["v"] },
-        { name: "worktree", description: "Allow linked git worktrees.", type: "boolean", negatable: true },
+        { name: "worktree", description: "Allow linked git worktrees.", type: "boolean", aliases: ["linked-worktree"], negatable: true },
         { name: "json", short: "j", description: "Render JSON.", type: "boolean" }
       ],
       examples: [
@@ -63,7 +63,7 @@ describe("schema renderer", () => {
     assert.deepEqual(command.flags.find((flag) => flag.name === "tag")?.tokens, ["--tag", "-t", "--label"]);
     assert.equal(command.flags.find((flag) => flag.name === "tag")?.multiple, true);
     assert.deepEqual(command.flags.find((flag) => flag.name === "verbose")?.tokens, ["--verbose", "--v"]);
-    assert.deepEqual(command.flags.find((flag) => flag.name === "worktree")?.tokens, ["--worktree", "--no-worktree"]);
+    assert.deepEqual(command.flags.find((flag) => flag.name === "worktree")?.tokens, ["--worktree", "--no-worktree", "--linked-worktree", "--no-linked-worktree"]);
     assert.equal(command.flags.find((flag) => flag.name === "worktree")?.negatable, true);
     assert.deepEqual(command.errors.map((error) => error.kind), ["a-error", "z-error"]);
     assert.deepEqual(command.exitCodes.map((exitCode) => exitCode.code), [0, 2]);
