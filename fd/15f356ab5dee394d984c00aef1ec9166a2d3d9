@@ -1,0 +1,27 @@
+examples/read-only-consumer/package.json
+  s_ef9b5f9023be9c::t_62899a4310f3dc 8
+README.md
+  s_ef9b5f9023be9c::t_62899a4310f3dc 12
+package.json
+  s_ef9b5f9023be9c::t_62899a4310f3dc 3
+examples/mutating-consumer/package.json
+  s_ef9b5f9023be9c::t_62899a4310f3dc 8
+docs/adoption-guide.md
+  s_ef9b5f9023be9c::t_62899a4310f3dc 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "fd15f356ab5dee394d984c00aef1ec9166a2d3d9",
+  "prompts": {},
+  "sessions": {
+    "s_ef9b5f9023be9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e4eac-5a2a-7022-a866-e068136351f2",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
