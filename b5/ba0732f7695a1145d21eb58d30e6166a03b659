@@ -1,0 +1,33 @@
+src/help/index.ts
+  s_ef9b5f9023be9c::t_e6215a9f6a26b6 7,63-68
+examples/mutating-consumer/src/cli.ts
+  s_ef9b5f9023be9c::t_49de2a312871b7 23-26,30,107
+src/runtime/index.ts
+  s_ef9b5f9023be9c::t_75b25da561d989 455-461
+  s_ef9b5f9023be9c::t_951c3b15aae65d 41-45,48-49,58,171,173,179-180,189-193,352-387,418-435,584-597,634-638
+examples/read-only-consumer/src/cli.ts
+  s_ef9b5f9023be9c::t_84e23c87a8aeac 22-25,29,62
+src/fixtures/cli.ts
+  s_ef9b5f9023be9c::t_8702a1d7ed5ba3 14-17,21,148
+tests/output-errors.test.mjs
+  s_ef9b5f9023be9c::t_f0d94497a63cf3 125-170
+tests/fixture-cli.test.mjs
+  s_ef9b5f9023be9c::t_b259c07199b3ed 19
+  s_ef9b5f9023be9c::t_f286349a79b01f 36-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "b5ba0732f7695a1145d21eb58d30e6166a03b659",
+  "prompts": {},
+  "sessions": {
+    "s_ef9b5f9023be9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e4eac-5a2a-7022-a866-e068136351f2",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
