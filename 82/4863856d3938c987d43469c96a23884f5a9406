@@ -1,0 +1,57 @@
+tests/mutating-consumer-adoption.test.mjs
+  s_ef9b5f9023be9c::t_63419123b6a27c 25,29,72,84
+examples/read-only-consumer/src/metadata.ts
+  s_ef9b5f9023be9c::t_63419123b6a27c 1-2
+docs/adoption-guide.md
+  s_ef9b5f9023be9c::t_0b82a1cc4efeaf 20
+  s_ef9b5f9023be9c::t_63419123b6a27c 5,28,49,130,137,224,323,389
+examples/read-only-consumer/tsconfig.json
+  s_ef9b5f9023be9c::t_63419123b6a27c 7-11
+examples/read-only-consumer/package.json
+  s_ef9b5f9023be9c::t_0b82a1cc4efeaf 8
+  s_ef9b5f9023be9c::t_63419123b6a27c 6
+examples/mutating-consumer/tsconfig.json
+  s_ef9b5f9023be9c::t_63419123b6a27c 7-12
+examples/mutating-consumer/package.json
+  s_ef9b5f9023be9c::t_0b82a1cc4efeaf 8
+  s_ef9b5f9023be9c::t_63419123b6a27c 6
+examples/mutating-consumer/src/cli.ts
+  s_ef9b5f9023be9c::t_63419123b6a27c 6-8,31
+README.md
+  s_ef9b5f9023be9c::t_0b82a1cc4efeaf 12
+  s_ef9b5f9023be9c::t_63419123b6a27c 1
+docs/compatibility-checklist.md
+  s_ef9b5f9023be9c::t_63419123b6a27c 5,112
+tests/consumer-adoption.test.mjs
+  s_ef9b5f9023be9c::t_63419123b6a27c 16,20,50,66
+docs/M4-adoption-validation.md
+  s_ef9b5f9023be9c::t_63419123b6a27c 47
+examples/read-only-consumer/src/cli.ts
+  s_ef9b5f9023be9c::t_63419123b6a27c 5-6,30
+src/fixtures/cli.ts
+  s_ef9b5f9023be9c::t_63419123b6a27c 22
+examples/mutating-consumer/src/metadata.ts
+  s_ef9b5f9023be9c::t_63419123b6a27c 1-3
+src/index.ts
+  s_ef9b5f9023be9c::t_63419123b6a27c 27
+package.json
+  s_ef9b5f9023be9c::t_a9cab3a9d7efad 2-3
+.github/workflows/publish.yml
+  s_ef9b5f9023be9c::t_88664b4fc40e05 43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "824863856d3938c987d43469c96a23884f5a9406",
+  "prompts": {},
+  "sessions": {
+    "s_ef9b5f9023be9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e4eac-5a2a-7022-a866-e068136351f2",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
