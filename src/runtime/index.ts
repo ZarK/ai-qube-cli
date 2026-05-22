@@ -645,6 +645,9 @@ function findUnknownFlag(command: CommandMetadata, argv: readonly string[]): str
       }
       continue;
     }
+    if (/^-\d/.test(token)) {
+      continue;
+    }
     const [name] = token.slice(1).split("=", 1);
     if (name && !knownShortFlags.has(name)) {
       return `-${name}`;

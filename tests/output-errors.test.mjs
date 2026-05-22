@@ -210,6 +210,33 @@ describe("output and error helpers", () => {
     assert.doesNotMatch(unknownShort.stderr, /raw text/);
   });
 
+  it("does not treat negative positional values as unknown short flags", async () => {
+    const { createCli, createCommand, createCommandRegistry, runCli } = await import("../dist/index.js");
+    const command = {
+      kind: "command",
+      name: "number inspect",
+      description: "Inspect a numeric positional value.",
+      arguments: [{ name: "value", description: "Numeric value to inspect." }],
+      flags: [{ name: "json", short: "j", description: "Render JSON output.", type: "boolean" }],
+      examples: [{ description: "Inspect a negative value.", command: "fixture number inspect -1 --json" }],
+      interactions: { json: true }
+    };
+    const cli = createCli({
+      bin: "fixture",
+      registry: createCommandRegistry({ commands: [command] }),
+      commands: [createCommand(command, ({ args }) => ({ json: { value: args.value } }))]
+    });
+
+    const result = await runCli(cli, ["number", "inspect", "-1", "-j"]);
+
+    assert.equal(result.exitCode, 0);
+    assert.deepEqual(JSON.parse(result.stdout), {
+      ok: true,
+      command: "number inspect",
+      value: "-1"
+    });
+  });
+
   it("renders non-zero runtime results as JSON failures", async () => {
     const { createCli, createCommand, createCommandRegistry, runCli } = await import("../dist/index.js");
     const failingCommand = {
