@@ -1,0 +1,39 @@
+tests/registry.test.mjs
+  s_ef9b5f9023be9c::t_826664966e4219 210-232
+tests/schema.test.mjs
+  s_ef9b5f9023be9c::t_1f03ef512b81a6 20,57,60,66-67
+tests/output-errors.test.mjs
+  s_ef9b5f9023be9c::t_58b7ad59259df8 240-285
+src/help/index.ts
+  s_ef9b5f9023be9c::t_2281ddf00479da 135,160-166,168-169,175
+src/registry/index.ts
+  s_ef9b5f9023be9c::t_0987e6c16a3b8e 220,246-247
+tests/metadata-validation.test.mjs
+  s_ef9b5f9023be9c::t_cce5fc2cb832b4 92-101
+src/metadata/define.ts
+  s_ef9b5f9023be9c::t_237bc1843ffcc8 34-36
+src/schema/index.ts
+  s_ef9b5f9023be9c::t_f908db427a0417 79,221,234
+src/runtime/index.ts
+  s_ef9b5f9023be9c::t_903efa8a01a351 241-260,551,652,679-690
+docs/spec.md
+  s_ef9b5f9023be9c::t_91dbdbea861bf2 45,70
+src/metadata/types.ts
+  s_ef9b5f9023be9c::t_ff52be70164939 58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "d37eec1b9e3d503db22eee45910d8fe273377bdb",
+  "prompts": {},
+  "sessions": {
+    "s_ef9b5f9023be9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e4eac-5a2a-7022-a866-e068136351f2",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Tjalve Aarflot <tjalve.github@proton.me>"
+    }
+  }
+}
