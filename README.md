@@ -27,6 +27,7 @@ Consuming packages own their command behavior, validation rules, product logic, 
 
 - [Adoption guide](docs/adoption-guide.md): add command metadata, registry-backed runtime wiring, schema output, JSON trigger metadata, human/JSON output, and CLI contract tests.
 - [Compatibility checklist](docs/compatibility-checklist.md): migrate existing commands command-by-command while preserving help, JSON, schema, exit-code, dry-run, and ownership boundaries.
+- [Codex AIE package notes](docs/codex-aie-package-notes.md): notes for future Codex, OpenCode, and GitHub `aie-*` package extraction.
 
 ## Verification
 
